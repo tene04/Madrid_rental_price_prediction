@@ -1,82 +1,62 @@
 # Madrid_rental_price_prediction
 
-## Descripción
+---
 
-Este proyecto utiliza un dataset obtenido de Kaggle, generado mediante un scraper de Idealista, para predecir el precio de alquiler de viviendas en Madrid. La predicción se realiza a partir de los datos que el usuario introduce a través de una aplicación web desarrollada con Streamlit.
+## Description
+This project uses a dataset obtained from Kaggle, generated through a scraper of Idealista, to predict the rental price of housing in Madrid. The prediction is made based on the data entered by the user through a web application developed with Streamlit.
 
 ---
 
-## Requisitos / Dependencias
-
-- Python (versión recomendada: 3.8+)
+## Requirements / Dependencies
+- Python (recommended version: 3.8+)
 - pandas
 - scikit-learn
 - streamlit
 - pickle
 
-Todas las librerías necesarias están listadas en el archivo `requirements.txt`.
+All required libraries are listed in the `requirements.txt` file.
 
 ---
 
-## Instalación
+## Installation
+1. Clone this repository:  
+   `git clone <repository-URL>`  
+   `cd Madrid_rental_price_prediction`
 
-1. Clona este repositorio:
-
-   ```bash
-   git clone <URL-del-repositorio>
-   cd Madrid_rental_price_prediction
-   ```
-
-2. Instala las dependencias
-
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. Install the dependencies:  
+   `pip install -r requirements.txt`
 
 ---
 
-## Ejecución
-
-Para lanzar la aplicación web, abre una terminal, navega a la carpeta prediction (donde está app.py) y ejecuta:
-  ```bash
-  streamlit run app.py
-  ```
-
-Después, abre el navegador en la URL que te indique Streamlit (normalmente http://localhost:8501).
+## Execution
+To launch the web application, open a terminal, navigate to the folder (where `app.py` is located), and run:  
+`streamlit run app.py`  
+Then, open your browser at the URL provided by Streamlit (usually http://localhost:8501).
 
 ---
 
-## Estructura del proyecto
+## Project Structure
+Madrid_rental_price_prediction/  
 
-Madrid_rental_price_prediction/
+├── data/                   # Original data in CSV format  
 
-│
+│   └── dataset.csv  
 
-├── data/                   # Datos originales en formato CSV
+├── notebooks/              # Notebook with EDA, preprocessing, and model training  
 
-│   └── dataset.csv
+│   └── exploracion.ipynb  
 
-│
+│   └── model.pkl           # Trained serialized model  
 
-├── notebooks/              # Notebook con análisis exploratorio, preprocesamiento y entrenamiento
+│   └── scaler.pkl          # Applied normalization  
 
-│   └── exploracion.ipynb
+├── app.py                  # Streamlit application that loads the model and makes predictions  
 
-│   └── model.pkl           # Modelo entrenado serializado
+├── requirements.txt        # Project dependencies  
 
-│   └── scaler.pkl           # normalización aplicada 
+└── README.md               # This file
 
-│
+---
 
-├── app.py              # Aplicación Streamlit que carga el modelo y realiza predicciones
-
-├── requirements.txt        # Dependencias necesarias para ejecutar el proyecto
-
-└── README.md               # Este archivo
-
---- 
-
-## Uso básico
-Ejecuta la app con el comando indicado en la sección Ejecución. En la interfaz web de Streamlit, introduce los datos requeridos para la predicción. El sistema mostrará automáticamente el precio estimado del alquiler en Madrid según los datos ingresados.
-
-
+## Basic Usage
+Run the app as described in the **Execution** section. In the Streamlit web interface, input the required data. The app will automatically display the estimated rental price in Madrid based on the provided information.
