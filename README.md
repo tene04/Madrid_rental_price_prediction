@@ -20,7 +20,7 @@ All required libraries are listed in the `requirements.txt` file.
 
 ## Installation
 1. Clone this repository:  
-   `git clone <repository-URL>`  
+   `git clone https://github.com/tene04/Madrid_rental_price_prediction.git`  
    `cd Madrid_rental_price_prediction`
 
 2. Install the dependencies:  
@@ -37,24 +37,17 @@ Then, open your browser at the URL provided by Streamlit (usually http://localho
 
 ## Project Structure
 Madrid_rental_price_prediction/  
-
+```text
 ├── data/                   # Original data in CSV format  
-
 │   └── dataset.csv  
-
 ├── notebooks/              # Notebook with EDA, preprocessing, and model training  
-
 │   └── exploracion.ipynb  
-
 │   └── model.pkl           # Trained serialized model  
-
 │   └── scaler.pkl          # Applied normalization  
-
 ├── app.py                  # Streamlit application that loads the model and makes predictions  
-
 ├── requirements.txt        # Project dependencies  
-
 └── README.md               # This file
+```
 
 ---
 
